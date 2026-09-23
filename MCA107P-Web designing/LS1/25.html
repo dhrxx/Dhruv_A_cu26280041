@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+</head>
+<body>
+
+    <h1>Student Survey</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Name:</label>
+            <input type="text" name="name">
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email" name="email">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Course Information</legend>
+
+            <label>Course:</label>
+            <select name="course">
+                <option>BCA</option>
+                <option>B.Tech</option>
+                <option>MCA</option>
+                <option>M.Tech</option>
+            </select>
+            <br><br>
+
+            <label>Are you satisfied with the course?</label><br>
+            <input type="radio" name="satisfaction" value="yes"> Yes
+            <input type="radio" name="satisfaction" value="no"> No
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Feedback</legend>
+
+            <label>Comments:</label><br>
+            <textarea name="comments" rows="4" cols="40"></textarea>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Submit Survey">
+
+    </form>
+
+</body>
+</html>
