@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Registration</h2>
+
+<form onsubmit="return check()">
+    <input id="p" type="password" placeholder="Password" required>
+    <input id="cp" type="password" placeholder="Confirm Password" required>
+    <button>Register</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function check() {
+    let p = document.getElementById("p").value;
+    let cp = document.getElementById("cp").value;
+
+    if (p != cp) {
+        document.getElementById("result").innerHTML =
+            "Passwords do not match!";
+        return false;
+    }
+
+    alert("Registration Successful!");
+    return true;
+}
+</script>
+
+</body>
+</html>

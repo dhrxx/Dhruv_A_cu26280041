@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Object</h2>
+<div id="result"></div>
+
+<script>
+let student = {
+    name: "Dhruv",
+    course: "MCA",
+    display: function() {
+        return "Name: " + this.name +
+               "<br>Course: " + this.course;
+    }
+};
+
+document.getElementById("result").innerHTML =
+    student.display();
+</script>
+
+</body>
+</html>

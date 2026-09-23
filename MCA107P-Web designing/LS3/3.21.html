@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Callback Demo</h2>
+<p id="result">Waiting...</p>
+
+<script>
+function greet(name, callback) {
+    setTimeout(() => callback("Hello " + name), 2000);
+}
+
+greet("Dhruv", message => {
+    document.getElementById("result").innerHTML = message;
+});
+</script>
+
+</body>
+</html>

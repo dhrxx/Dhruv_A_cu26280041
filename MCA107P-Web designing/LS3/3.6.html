@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Operations</h2>
+<div id="result"></div>
+
+<script>
+let a = [10, 5, 20, 15];
+
+a.push(25);
+a.pop();
+
+let sorted = [...a].sort((x, y) => x - y);
+let doubled = a.map(x => x * 2);
+let filtered = a.filter(x => x > 10);
+
+document.getElementById("result").innerHTML =
+    "Array: " + a +
+    "<br>Sorted: " + sorted +
+    "<br>Mapped: " + doubled +
+    "<br>Filtered: " + filtered;
+</script>
+
+</body>
+</html>

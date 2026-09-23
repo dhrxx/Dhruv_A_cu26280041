@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background: #eef2ff;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    max-width: 350px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #ccc;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus {
+    border-color: #4f46e5;
+    background: #eef2ff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4f46e5;
+    color: white;
+    border: 0;
+}

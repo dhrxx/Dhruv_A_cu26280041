@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>ES6 Features</h2>
+<p id="result"></p>
+
+<script>
+let student = {name: "Dhruv", course: "MCA"};
+let {name, course} = student;
+
+let greet = (n, c) => `Hello ${n}, Course: ${c}`;
+
+document.getElementById("result").innerHTML =
+    greet(name, course);
+</script>
+
+</body>
+</html>

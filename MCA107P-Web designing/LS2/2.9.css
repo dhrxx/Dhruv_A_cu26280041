@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+    background: #eef2ff;
+}
+
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 12px #bbb;
+}
+
+fieldset {
+    margin: 15px 0;
+    padding: 15px;
+    border: 2px solid #6366f1;
+}
+
+legend {
+    font-weight: bold;
+    color: #4338ca;
+}

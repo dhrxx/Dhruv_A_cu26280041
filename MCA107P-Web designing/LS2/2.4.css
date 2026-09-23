@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f1f5f9;
+}
+
+header {
+    background: #312e81;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.layout {
+    display: flex;
+    min-height: 350px;
+}
+
+nav {
+    width: 220px;
+    background: #e0e7ff;
+    padding: 20px;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+    background: white;
+}

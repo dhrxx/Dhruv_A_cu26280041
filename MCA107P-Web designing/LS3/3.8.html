@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calculator</h2>
+<input id="a" type="number" placeholder="First number">
+<input id="b" type="number" placeholder="Second number">
+
+<button id="add">+</button>
+<button id="sub">−</button>
+<button id="mul">×</button>
+<button id="div">÷</button>
+
+<h3 id="result"></h3>
+
+<script>
+let a = document.getElementById("a");
+let b = document.getElementById("b");
+let r = document.getElementById("result");
+
+function calculate(op) {
+    let x = Number(a.value), y = Number(b.value);
+    r.innerHTML = op == "+" ? x + y :
+                  op == "-" ? x - y :
+                  op == "*" ? x * y : x / y;
+}
+
+document.getElementById("add").addEventListener("click", () => calculate("+"));
+document.getElementById("sub").addEventListener("click", () => calculate("-"));
+document.getElementById("mul").addEventListener("click", () => calculate("*"));
+document.getElementById("div").addEventListener("click", () => calculate("/"));
+</script>
+
+</body>
+</html>

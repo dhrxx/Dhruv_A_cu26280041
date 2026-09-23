@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background: #eef2ff;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    max-width: 350px;
+    margin: 80px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #ccc;
+    text-align: center;
+}
+
+input {
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 25px;
+    background: #4f46e5;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}

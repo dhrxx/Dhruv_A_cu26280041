@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSON Parsing</h2>
+<p id="result"></p>
+
+<script>
+try {
+    let data = JSON.parse('{"name":"Dhruv","course":"MCA"}');
+    document.getElementById("result").innerHTML =
+        "Name: " + data.name;
+} catch (error) {
+    document.getElementById("result").innerHTML =
+        "Invalid JSON";
+} finally {
+    console.log("Execution Completed");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 25px;
+    box-shadow: 0 0 12px #bbb;
+}
+
+input:not([type="hidden"]) {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 25px;
+    background: blue;
+    color: white;
+    border: 0;
+}

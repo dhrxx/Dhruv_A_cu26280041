@@ -1,0 +1,30 @@
+form {
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    box-shadow: 0 0 12px #bbb;
+}
+
+.row {
+    margin: 15px 0;
+}
+
+label {
+    float: left;
+    width: 100px;
+}
+
+input, select {
+    padding: 8px;
+}
+
+.clear {
+    clear: both;
+}
+
+button {
+    padding: 10px 25px;
+    background: green;
+    color: white;
+    border: 0;
+}

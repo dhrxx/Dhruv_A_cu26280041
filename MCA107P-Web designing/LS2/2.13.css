@@ -1,0 +1,15 @@
+input {
+    display: none;
+}
+
+label::before {
+    content: "✓";
+    color: white;
+    background: white;
+    border: 2px solid blue;
+    margin-right: 8px;
+}
+
+input:checked + label::before {
+    background: blue;
+}

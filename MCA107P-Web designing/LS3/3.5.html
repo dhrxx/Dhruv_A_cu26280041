@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Palindrome Checker</h2>
+<input id="text" placeholder="Enter text">
+<button onclick="check()">Check</button>
+<div id="result"></div>
+
+<script>
+function check() {
+    let s = document.getElementById("text").value;
+    let rev = s.split("").reverse().join("");
+
+    document.getElementById("result").innerHTML =
+        "Reverse: " + rev + "<br>" +
+        (s.toLowerCase() == rev.toLowerCase()
+        ? "Palindrome" : "Not Palindrome");
+}
+</script>
+
+</body>
+</html>

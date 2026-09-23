@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Image Gallery</h2>
+<img id="pic" width="300" height="200">
+
+<br>
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+
+<script>
+let images = [
+    "https://picsum.photos/id/10/300/200",
+    "https://picsum.photos/id/20/300/200",
+    "https://picsum.photos/id/30/300/200"
+];
+
+let i = 0;
+let pic = document.getElementById("pic");
+pic.src = images[i];
+
+function next() {
+    i = (i + 1) % images.length;
+    pic.src = images[i];
+}
+
+function prev() {
+    i = (i - 1 + images.length) % images.length;
+    pic.src = images[i];
+}
+</script>
+
+</body>
+</html>

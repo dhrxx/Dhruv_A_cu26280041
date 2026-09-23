@@ -1,0 +1,27 @@
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    box-shadow: 0 0 12px #bbb;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    form {
+        margin: 20px;
+    }
+}

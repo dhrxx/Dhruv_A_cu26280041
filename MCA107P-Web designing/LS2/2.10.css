@@ -1,0 +1,25 @@
+form {
+    width: 450px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 0 12px #bbb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #e0e7ff;
+}
+
+tr:hover {
+    background: #c7d2fe;
+}

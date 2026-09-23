@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Private Counter</h2>
+<button onclick="counter.inc()">+</button>
+<button onclick="counter.dec()">−</button>
+<h3 id="result">0</h3>
+
+<script>
+function createCounter() {
+    let count = 0;
+
+    return {
+        inc: () => document.getElementById("result").innerHTML = ++count,
+        dec: () => document.getElementById("result").innerHTML = --count
+    };
+}
+
+let counter = createCounter();
+</script>
+
+</body>
+</html>

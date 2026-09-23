@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Add Items</h2>
+<input id="text" placeholder="Enter item">
+<button onclick="add()">Add</button>
+<ul id="list"></ul>
+
+<script>
+function add() {
+    let text = document.getElementById("text").value;
+    let li = document.createElement("li");
+
+    li.textContent = text;
+    document.getElementById("list").appendChild(li);
+}
+</script>
+
+</body>
+</html>
