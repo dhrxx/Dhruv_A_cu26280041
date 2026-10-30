@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block content %}
+<section class="hero"><p class="eyebrow">MCA105P · LAB SHEET 9</p><h1>Student Record Management</h1>
+<p>Add, view, search, update and delete student records stored in MongoDB.</p>
+<div class="actions"><a class="button" href="{{ url_for('add_student') }}">Add a student</a>
+<a class="button secondary" href="{{ url_for('view_students') }}">View records</a></div></section>
+<section class="panel"><h2>System status</h2><p>MongoDB: <strong class="{{ 'ok' if connected else 'bad' }}">{{ 'Connected' if connected else 'Not connected' }}</strong></p>
+<p>Total student records: <strong>{{ total }}</strong></p></section>{% endblock %}

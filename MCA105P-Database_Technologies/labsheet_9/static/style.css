@@ -1,0 +1,10 @@
+:root{font-family:Inter,system-ui,Arial,sans-serif;color:#172033;background:#f4f6fb}*{box-sizing:border-box}
+body{margin:0}header{background:#172554;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+a{color:#3157b7}.brand{font-weight:800;color:white;text-decoration:none;font-size:1.2rem}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:white;text-decoration:none}
+main{max-width:1100px;margin:42px auto;padding:0 20px}.hero,.panel{background:white;border:1px solid #e3e8f2;border-radius:18px;padding:30px;margin-bottom:22px;box-shadow:0 8px 30px #15254a0b}
+.hero{padding:48px}.hero h1{font-size:clamp(2rem,5vw,3.5rem);margin:8px 0}.eyebrow{color:#526bb4;font-weight:700;letter-spacing:.12em}
+.actions{display:flex;gap:12px;margin-top:24px}.button,button{background:#3157b7;color:white;border:0;border-radius:9px;padding:11px 16px;text-decoration:none;cursor:pointer;font-weight:650}
+.secondary{background:#e9eefb;color:#24438e}label{display:block;margin:15px 0 6px;font-weight:650}input,select{padding:11px;border:1px solid #ccd4e3;border-radius:8px;width:100%;max-width:520px}
+form:not(.inline):not(.delete){display:flex;flex-direction:column;align-items:flex-start}.inline{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.inline input,.inline select{width:auto}
+.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;margin-top:20px}th,td{text-align:left;padding:12px;border-bottom:1px solid #e7eaf1;white-space:nowrap}th{background:#f0f3fa}
+.delete{display:inline}.danger{background:#b42332;padding:7px 10px}.flash{padding:12px;border-radius:8px;margin-bottom:14px;background:#e9eefb}.success,.ok{color:#137547}.error,.bad{color:#b42332}footer{text-align:center;color:#667085;padding:30px}

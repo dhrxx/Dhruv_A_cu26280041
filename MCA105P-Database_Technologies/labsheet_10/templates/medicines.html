@@ -1,0 +1,8 @@
+{% extends 'base.html' %}{% block content %}<section class="panel"><h1>{{ heading|default('All Medicines') }}</h1>
+<div class="actions"><a href="{{ url_for('add_medicine') }}">Add medicine</a><a href="{{ url_for('query_practice', price_gt='50') }}">Price above ₹50</a>
+<a href="{{ url_for('query_practice', price_lt='100') }}">Price below ₹100</a><a href="{{ url_for('query_practice', stock_lt='30') }}">Stock below 30</a></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Manufacturer</th><th>Supplier</th><th>Action</th></tr></thead><tbody>
+{% for m in medicines %}<tr><td>{{ m.medicine_id }}</td><td>{{ m.name }}</td><td>{{ m.category }}</td><td>₹{{ m.price }}</td><td>{{ m.stock }}</td><td>{{ m.manufacturer }}</td>
+<td>{% if m.supplier %}{{ m.supplier.name }} · {{ m.supplier.city }} · {{ m.supplier.phone }}{% else %}—{% endif %}</td>
+<td><form class="delete" method="post" action="{{ url_for('delete_medicine', medicine_id=m._id|string) }}" onsubmit="return confirm('Delete this medicine?')"><button class="danger">Delete</button></form></td></tr>
+{% else %}<tr><td colspan="8">No medicine records found.</td></tr>{% endfor %}</tbody></table></div></section>{% endblock %}

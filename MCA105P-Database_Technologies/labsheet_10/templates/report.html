@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block content %}<section class="panel"><h1>Inventory Report</h1><div class="stats">
+<div><span>Total medicines</span><b>{{ total_medicines }}</b></div><div><span>Total stock units</span><b>{{ total_stock }}</b></div>
+<div><span>Low stock medicines (&lt;30)</span><b>{{ low_count }}</b></div></div>
+<h2>Price highlights</h2><p>Most expensive: {% if most_expensive %}<b>{{ most_expensive.name }}</b> — ₹{{ most_expensive.price }}{% else %}No data{% endif %}</p>
+<p>Cheapest: {% if cheapest %}<b>{{ cheapest.name }}</b> — ₹{{ cheapest.price }}{% else %}No data{% endif %}</p></section>{% endblock %}

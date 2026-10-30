@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block content %}<section class="hero"><p class="eyebrow">MCA105P · LAB SHEET 10</p>
+<h1>Hospital Medicine Management</h1><p>Manage medicine records, inventory, suppliers and stock reports.</p>
+<div class="actions"><a class="button" href="{{ url_for('add_medicine') }}">Add medicine</a><a class="button secondary" href="{{ url_for('view_medicines') }}">View inventory</a></div></section>
+<section class="panel"><h2>Dashboard</h2><p>MongoDB: <b class="{{ 'ok' if connected else 'bad' }}">{{ 'Connected' if connected else 'Not connected' }}</b></p>
+<p>Total medicine records: <b>{{ total }}</b></p><div class="actions"><a href="{{ url_for('supplier_demo') }}">Load supplier examples</a><a href="{{ url_for('query_practice') }}">Query practice</a></div></section>{% endblock %}
