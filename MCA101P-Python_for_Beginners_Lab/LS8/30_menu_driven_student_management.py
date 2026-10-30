@@ -1,0 +1,52 @@
+# Menu-driven student management: Add, View, Update, Delete.
+import sqlite3
+
+DB = "student_db.sqlite"
+
+def setup():
+    with sqlite3.connect(DB) as con:
+        con.execute("""CREATE TABLE IF NOT EXISTS students(
+            id INTEGER PRIMARY KEY, name TEXT NOT NULL,
+            age INTEGER NOT NULL, marks REAL NOT NULL)""")
+
+def add():
+    values = (int(input("ID: ")), input("Name: ").strip(),
+              int(input("Age: ")), float(input("Marks: ")))
+    with sqlite3.connect(DB) as con:
+        con.execute("INSERT INTO students VALUES(?,?,?,?)", values)
+    print("Student added.")
+
+def view():
+    with sqlite3.connect(DB) as con:
+        rows = con.execute("SELECT * FROM students ORDER BY id").fetchall()
+    for row in rows: print(row)
+    if not rows: print("No records.")
+
+def update():
+    student_id = int(input("ID to update: "))
+    marks = float(input("New marks: "))
+    with sqlite3.connect(DB) as con:
+        cur = con.execute("UPDATE students SET marks=? WHERE id=?", (marks, student_id))
+    print("Updated." if cur.rowcount else "ID not found.")
+
+def delete():
+    student_id = int(input("ID to delete: "))
+    with sqlite3.connect(DB) as con:
+        cur = con.execute("DELETE FROM students WHERE id=?", (student_id,))
+    print("Deleted." if cur.rowcount else "ID not found.")
+
+def main():
+    setup()
+    actions = {"1": add, "2": view, "3": update, "4": delete}
+    while True:
+        print("\\n1.Add  2.View  3.Update marks  4.Delete  5.Exit")
+        choice = input("Choose: ")
+        if choice == "5": break
+        try:
+            if choice in actions: actions[choice]()
+            else: print("Invalid choice.")
+        except (ValueError, sqlite3.Error) as error:
+            print("Input/database error:", error)
+
+if __name__ == "__main__":
+    main()
