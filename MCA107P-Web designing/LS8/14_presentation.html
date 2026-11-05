@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Planning, design, development, and testing slides for the Juniper & Grain bakery website lab.">
+  <meta property="og:title" content="Juniper & Grain website project presentation">
+  <meta property="og:description" content="A concise walkthrough of the fictional bakery website project.">
+  <title>Website project presentation | Juniper &amp; Grain</title>
+  <link rel="stylesheet" href="03_responsive_layout.css">
+  <style>
+    .deck { max-width: 60rem; margin-inline: auto; }
+    .deck-slide { min-height: 65vh; display: grid; align-content: center; padding: clamp(1.5rem, 7vw, 5rem); margin-block: 1.5rem; background: var(--cream); border: 1px solid var(--line); }
+    .deck-slide:nth-child(even) { color: var(--paper); background: var(--forest); }
+    .deck-slide:nth-child(even) .eyebrow { color: var(--gold); }
+    .deck-slide h2 { font-size: clamp(2.2rem, 7vw, 4.5rem); }
+    .deck-slide li { margin-block: .6rem; }
+    .deck-nav { position: sticky; z-index: 4; bottom: .5rem; display: flex; justify-content: center; gap: 1rem; padding: .6rem; background: rgb(255 254 250 / 94%); }
+    .deck-nav a { padding: .4rem .8rem; }
+    @media print { .site-header, .deck-nav, .skip-link { display: none; } .deck-slide { min-height: 90vh; break-after: page; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#slides">Skip to presentation</a>
+  <header class="site-header"><a class="wordmark" href="02_semantic_structure.html">Juniper &amp; Grain · Lab Sheet 8</a><a href="02_semantic_structure.html">Open website demo</a></header>
+  <main id="slides" class="deck">
+    <!-- Create a slide presentation outlining the website planning, wireframing, development phases, and testing results. -->
+    <section class="deck-slide" id="slide-1" aria-labelledby="slide-1-title"><p class="eyebrow">01 · The project</p><h1 id="slide-1-title">A neighborhood, in the making.</h1><p>A responsive website for Juniper &amp; Grain, a fictional artisan bakery built for slower mornings and local discovery.</p><p><strong>Audience:</strong> nearby neighbors, weekend visitors, bread lovers.</p></section>
+    <section class="deck-slide" id="slide-2" aria-labelledby="slide-2-title"><p class="eyebrow">02 · Plan &amp; wireframe</p><h2 id="slide-2-title">A clear path from hello to the table.</h2><ol><li>Hero: brand promise and featured bake.</li><li>Menu, story, team, then neighbor reviews.</li><li>Reservation demonstration and contact/map.</li><li>Shareable footer and practical navigation.</li></ol><p>See <a href="01_project_spec.md">the complete project brief and wireframe</a>.</p></section>
+    <section class="deck-slide" id="slide-3" aria-labelledby="slide-3-title"><p class="eyebrow">03 · Design system</p><h2 id="slide-3-title">Warm, readable, unhurried.</h2><ul><li>Forest, cream, sage, and terracotta palette.</li><li>Editorial serif display type, system sans body type.</li><li>Consistent spacing tokens and a mobile-first grid.</li><li>Original lightweight local SVG illustrations.</li></ul><p><a href="13_design_rationale.md">Read the design rationale</a>.</p></section>
+    <section class="deck-slide" id="slide-4" aria-labelledby="slide-4-title"><p class="eyebrow">04 · Build</p><h2 id="slide-4-title">Semantic HTML. Flexible CSS. Small JS.</h2><ul><li>Semantic landmarks and accessible forms.</li><li>CSS Grid and Flexbox, progressive breakpoints.</li><li>Keyboard-operated, pauseable carousel.</li><li>Locally validated booking demo, no data transmission.</li><li>Native share action with an in-browser fallback.</li></ul></section>
+    <section class="deck-slide" id="slide-5" aria-labelledby="slide-5-title"><p class="eyebrow">05 · Test &amp; present</p><h2 id="slide-5-title">Check the experience, not just the pixels.</h2><ul><li>Served locally over HTTP; routes and static assets smoke-tested.</li><li>Resize through narrow, tablet, and desktop viewports.</li><li>Verify keyboard focus, reduced motion, labels, and live updates.</li><li>Run Lighthouse in Chrome and test Firefox, Edge, and Safari before release.</li></ul><p><a href="15_demo_guide.md">Open the live-demo guide</a>.</p></section>
+  </main>
+  <nav class="deck-nav" aria-label="Presentation slides"><a href="#slide-1">Start</a><a href="#slide-2">Plan</a><a href="#slide-3">Design</a><a href="#slide-4">Build</a><a href="#slide-5">Test</a></nav>
+</body>
+</html>

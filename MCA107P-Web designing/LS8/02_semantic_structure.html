@@ -1,0 +1,186 @@
+<!-- Implement a semantic HTML5 structure reflecting the client's business offerings, team, testimonials, and contact details. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244338">
+  <meta name="description" content="Juniper &amp; Grain is a fictional neighborhood bakery serving naturally leavened bread, seasonal pastries, and good coffee.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Juniper &amp; Grain | Slow mornings, good bread">
+  <meta property="og:description" content="Meet the fictional neighborhood bakery making bread slowly and mornings a little brighter.">
+  <meta property="og:image" content="images/bakery-mark.svg">
+  <meta property="og:url" content="https://example.com/juniper-grain">
+  <title>Juniper &amp; Grain | Slow mornings, good bread</title>
+  <link rel="icon" href="images/bakery-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="03_responsive_layout.css">
+  <script src="06_carousel.js" defer></script>
+  <script src="07_booking.js" defer></script>
+  <script src="18_testimonials.js" defer></script>
+  <script src="19_site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Juniper and Grain home">
+      <img src="images/bakery-mark.svg" width="42" height="42" alt="">
+      <span>Juniper <span aria-hidden="true">&amp;</span> Grain</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="#bakes">Today's bakes</a>
+      <a href="#story">Our story</a>
+      <a href="#reviews">Kind words</a>
+      <a class="nav-cta" href="#visit">Plan a visit</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <p class="eyebrow">A neighborhood bakery · Est. 2018</p>
+        <h1 id="hero-heading">Slow mornings.<br><em>Good bread.</em></h1>
+        <p class="hero-intro">Naturally leavened loaves, buttery little rituals, and coffee worth lingering over. Made with care in our very imaginary Portland kitchen.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#bakes">See what's fresh <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#story">A note from our bakers</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="carousel" aria-roledescription="carousel" aria-label="Fresh from the bakery">
+          <div class="carousel-track">
+            <article class="carousel-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3" data-slide>
+              <img src="images/sourdough.svg" width="680" height="540" alt="Illustration of a golden round sourdough loaf on a linen cloth">
+              <p class="image-caption">The everyday sourdough <span>Slow-fermented · Always worth the wait</span></p>
+            </article>
+            <article class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" data-slide hidden>
+              <img src="images/pastry.svg" width="680" height="540" alt="Illustration of a flaky, golden morning pastry with a berry">
+              <p class="image-caption">Seasonal morning buns <span>Folded by hand · Here till they're gone</span></p>
+            </article>
+            <article class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" data-slide hidden>
+              <img src="images/coffee.svg" width="680" height="540" alt="Illustration of a warm cup of coffee beside a leafy sprig">
+              <p class="image-caption">Something warm to sip <span>Small-batch roasted · Poured with care</span></p>
+            </article>
+          </div>
+          <div class="carousel-controls" aria-label="Carousel controls">
+            <button type="button" data-carousel-prev aria-label="Previous featured bake">←</button>
+            <span class="carousel-count" aria-live="polite" data-carousel-count>01 / 03</span>
+            <button type="button" data-carousel-next aria-label="Next featured bake">→</button>
+            <button class="carousel-pause" type="button" data-carousel-pause aria-pressed="false">Pause</button>
+          </div>
+        </div>
+        <span class="hero-stamp" aria-hidden="true">Baked<br>with time</span>
+      </div>
+      <a class="scroll-cue" href="#bakes">A little further down <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section id="bakes" class="section bakes-section" aria-labelledby="bakes-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">Out of the oven</p><h2 id="bakes-heading">A few daily favorites</h2></div>
+        <p>Small batches, good ingredients, and the occasional surprise.</p>
+      </div>
+      <div class="bake-grid">
+        <article class="bake-card">
+          <img src="images/sourdough.svg" width="680" height="540" loading="lazy" alt="Golden country sourdough with a scored crust">
+          <div class="bake-meta"><span>Long ferment · Vegan</span><span>$9</span></div>
+          <h3>Country sourdough</h3><p>Crackly crust, open crumb, and a little bit of patience in every slice.</p>
+        </article>
+        <article class="bake-card">
+          <img src="images/pastry.svg" width="680" height="540" loading="lazy" alt="Flaky seasonal morning bun finished with berries">
+          <div class="bake-meta"><span>Seasonal · Made today</span><span>$5</span></div>
+          <h3>Market morning bun</h3><p>Buttery, flaky layers rolled around whatever the market brought us.</p>
+        </article>
+        <article class="bake-card">
+          <img src="images/coffee.svg" width="680" height="540" loading="lazy" alt="A cup of freshly brewed coffee">
+          <div class="bake-meta"><span>Fair-trade beans</span><span>$4</span></div>
+          <h3>House pour-over</h3><p>Bright, cozy, and made with beans from a small partner roastery.</p>
+        </article>
+      </div>
+      <p class="availability-note"><span class="availability-dot" aria-hidden="true"></span> Our menu changes with the seasons. Come early for the best of the batch.</p>
+    </section>
+
+    <section id="story" class="story-section" aria-labelledby="story-heading">
+      <div class="story-art">
+        <img src="images/baker.svg" width="640" height="620" loading="lazy" alt="Illustration of a baker holding a freshly baked loaf">
+        <span class="story-note">Real butter.<br>Real slow mornings.</span>
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">A little about us</p>
+        <h2 id="story-heading">Good things take<br><em>their sweet time.</em></h2>
+        <p>Juniper &amp; Grain is a fictional neighborhood bakery built around a real belief: food feels better when you know who made it, where it came from, and that someone cared.</p>
+        <p>Our imaginary bakers work with seasonal produce, thoughtfully sourced flour, and plenty of time. Pull up a chair, say hello, and let the day start gently.</p>
+        <a class="text-link" href="#team">Meet the little team <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section id="team" class="section team-section" aria-labelledby="team-heading">
+      <p class="eyebrow">Flour on our sleeves</p>
+      <h2 id="team-heading">The hands behind the bread</h2>
+      <div class="team-grid">
+        <article class="team-card"><img src="images/baker.svg" width="180" height="180" loading="lazy" alt=""><h3>Rae Morgan</h3><p>Head baker · Keeper of the starter</p></article>
+        <article class="team-card"><img src="images/baker.svg" width="180" height="180" loading="lazy" alt=""><h3>Sam Rivera</h3><p>Pastry maker · Market morning regular</p></article>
+        <article class="team-card"><img src="images/baker.svg" width="180" height="180" loading="lazy" alt=""><h3>Alex Kim</h3><p>Barista · First hello of the day</p></article>
+      </div>
+      <p class="demo-note">Team members and business details on this sample site are fictional.</p>
+    </section>
+
+    <section id="reviews" class="reviews-section" aria-labelledby="reviews-heading">
+      <div class="section section-inner">
+        <p class="eyebrow">Notes from the neighborhood</p>
+        <h2 id="reviews-heading">Kind words, <em>little stars.</em></h2>
+        <p class="demo-note">Example testimonials for the lab demo; not real customer reviews.</p>
+        <div class="review-grid">
+          <figure class="review-card">          <div class="rating" role="img" aria-label="5 out of 5 example stars">★★★★★</div><blockquote>“The sourdough has ruined all other toast for me—in the very best way.”</blockquote><figcaption>Jamie L. <span>· Local regular</span></figcaption><div class="interactive-rating" role="group" aria-label="Rate this sample testimonial" data-rating><button type="button" data-star="1" aria-label="Rate 1 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="2" aria-label="Rate 2 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="3" aria-label="Rate 3 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="4" aria-label="Rate 4 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="5" aria-label="Rate 5 out of 5 stars" aria-pressed="false">☆</button><span data-rating-result aria-live="polite"></span></div><button class="rate-button" type="button" data-rate aria-pressed="false">Helpful <span data-rate-count>4</span></button></figure>
+          <figure class="review-card"><div class="rating" role="img" aria-label="5 out of 5 example stars">★★★★★</div><blockquote>“A warm little corner of the neighborhood, with a really good morning bun.”</blockquote><figcaption>Taylor R. <span>· Weekend visitor</span></figcaption><div class="interactive-rating" role="group" aria-label="Rate this sample testimonial" data-rating><button type="button" data-star="1" aria-label="Rate 1 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="2" aria-label="Rate 2 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="3" aria-label="Rate 3 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="4" aria-label="Rate 4 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="5" aria-label="Rate 5 out of 5 stars" aria-pressed="false">☆</button><span data-rating-result aria-live="polite"></span></div><button class="rate-button" type="button" data-rate aria-pressed="false">Helpful <span data-rate-count>2</span></button></figure>
+          <figure class="review-card"><div class="rating" role="img" aria-label="4 out of 5 example stars">★★★★☆</div><blockquote>“The kind of place that makes an ordinary Tuesday feel special.”</blockquote><figcaption>Casey M. <span>· Coffee person</span></figcaption><div class="interactive-rating" role="group" aria-label="Rate this sample testimonial" data-rating><button type="button" data-star="1" aria-label="Rate 1 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="2" aria-label="Rate 2 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="3" aria-label="Rate 3 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="4" aria-label="Rate 4 out of 5 stars" aria-pressed="false">☆</button><button type="button" data-star="5" aria-label="Rate 5 out of 5 stars" aria-pressed="false">☆</button><span data-rating-result aria-live="polite"></span></div><button class="rate-button" type="button" data-rate aria-pressed="false">Helpful <span data-rate-count>6</span></button></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation-section" aria-labelledby="reservation-heading">
+      <div class="reservation-copy"><p class="eyebrow">A seat at the table</p><h2 id="reservation-heading">Make room for<br><em>a good morning.</em></h2><p>Planning a small gathering? Send us a note and we'll save you a place. This demo form validates locally and does not send a real booking.</p></div>
+      <form class="booking-form" data-booking-form novalidate>
+        <div class="form-row">
+          <label for="booking-name">Your name</label>
+          <input id="booking-name" name="name" autocomplete="name" required minlength="2" maxlength="80">
+          <span class="field-error" data-error-for="name"></span>
+        </div>
+        <div class="form-row">
+          <label for="booking-email">Email address</label>
+          <input id="booking-email" name="email" type="email" autocomplete="email" required maxlength="254">
+          <span class="field-error" data-error-for="email"></span>
+        </div>
+        <div class="form-row form-row-split">
+          <div><label for="booking-date">Date</label><input id="booking-date" name="date" type="date" required><span class="field-error" data-error-for="date"></span></div>
+          <div><label for="booking-guests">Guests</label><select id="booking-guests" name="guests" required><option value="">Choose</option><option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option></select><span class="field-error" data-error-for="guests"></span></div>
+        </div>
+        <button class="button button-light" type="submit">Request a table <span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite" data-booking-status></p>
+      </form>
+    </section>
+
+    <section id="visit" class="visit-section section" aria-labelledby="visit-heading">
+      <div class="visit-copy"><p class="eyebrow">Come say hello</p><h2 id="visit-heading">Your table is<br><em>by the window.</em></h2>
+        <address>123 Example Street<br>Portland, OR 97205 <span class="demo-note">(fictional demo address)</span></address>
+        <p><a href="mailto:hello@example.com">hello@example.com</a><br>(503) 555-0142 <span class="demo-note">(sample contact details)</span></p>
+        <h3>Open most days</h3><p>Tuesday–Sunday · 7:00 am–2:00 pm<br>Monday · Closed</p>
+      </div>
+      <div class="map-frame">
+        <iframe title="Map showing Portland, Oregon (demo location)" src="https://maps.google.com/maps?q=Portland%2C%20Oregon&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <p><a href="https://maps.google.com/?q=Portland%2C%20Oregon" target="_blank" rel="noopener noreferrer">Open Portland in Google Maps</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div><a class="wordmark footer-wordmark" href="#home"><img src="images/bakery-mark.svg" width="38" height="38" alt=""><span>Juniper &amp; Grain</span></a><p>Little-batch bakes, big-hearted mornings.</p></div>
+      <div><h2>Find your way</h2><a href="#bakes">Today's bakes</a><a href="#story">Our story</a><a href="#visit">Visit us</a></div>
+      <div><h2>Pass it along</h2><button class="share-button" type="button" data-share>Share this bakery</button><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Juniper &amp; Grain · A fictional design exercise</span><a href="#home">Back to the top ↑</a><span data-share-status role="status" aria-live="polite"></span></div>
+  </footer>
+</body>
+</html>

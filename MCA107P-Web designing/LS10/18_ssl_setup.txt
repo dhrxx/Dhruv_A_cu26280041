@@ -1,0 +1,8 @@
+Question 18: Install and configure an SSL/TLS certificate (self-signed locally) on the Apache server and enable HTTPS.
+
+For local development only, create a self-signed certificate outside the public web root (run OpenSSL from an administrator terminal only if Apache's configuration requires it):
+
+    mkdir C:\Apache24\conf\certs
+    openssl req -x509 -nodes -days 365 -newkey rsa:3072 -keyout C:\Apache24\conf\certs\myproject.key -out C:\Apache24\conf\certs\myproject.crt -subj "/CN=myproject.local"
+
+Enable `mod_ssl` and the SSL module in Apache, then add a port-443 virtual-host with `SSLEngine on`, `SSLCertificateFile` pointing to the `.crt`, and `SSLCertificateKeyFile` pointing to the `.key`. Restart Apache and visit `https://myproject.local/`. Browsers will warn because this certificate is self-signed; never use it for a public website. Use a trusted certificate authority for production and keep the private key readable only by the server.

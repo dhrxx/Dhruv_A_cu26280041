@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 620" role="img" aria-labelledby="title">
+  <title id="title">Illustration of a friendly baker holding bread</title>
+  <rect width="640" height="620" rx="25" fill="#dce8da"/>
+  <circle cx="325" cy="200" r="92" fill="#d99a6b"/>
+  <path d="M229 187c-3-79 51-129 108-122 62 7 97 55 88 122-19-27-40-40-71-42-34 28-77 39-125 42Z" fill="#564137"/>
+  <path d="M282 204c10 6 22 6 33 0m24 0c10 6 22 6 32 0" fill="none" stroke="#46362f" stroke-linecap="round" stroke-width="7"/>
+  <path d="M309 239c16 13 40 14 57-1" fill="none" stroke="#914838" stroke-linecap="round" stroke-width="7"/>
+  <path d="M205 319c43-39 195-47 242 0l82 241H115Z" fill="#f4eee0"/>
+  <path d="M274 323c27 19 75 19 103 0l31 48-82 87-81-87Z" fill="#bd593f"/>
+  <path d="M285 328c19 20 62 20 82 0" fill="none" stroke="#e0a57b" stroke-width="7"/>
+  <path d="M144 472c45-63 87-95 139-98 45-3 72 22 82 59-46 48-151 79-221 39Z" fill="#c17d40"/>
+  <path d="M158 463c27-41 57-63 97-76m-57 96c36-42 71-66 113-78" fill="none" stroke="#f8d694" stroke-linecap="round" stroke-width="14"/>
+  <path d="M120 562h407" stroke="#6c8a68" stroke-linecap="round" stroke-width="9"/>
+</svg>

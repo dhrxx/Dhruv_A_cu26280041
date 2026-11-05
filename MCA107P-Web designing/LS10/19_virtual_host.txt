@@ -1,0 +1,15 @@
+Question 19: Create a virtual host (e.g., myproject.local) in Apache and map it through the system hosts file.
+
+Add a local-only virtual host to Apache's configuration (adjust paths to your installation):
+
+    <VirtualHost *:80>
+        ServerName myproject.local
+        DocumentRoot "C:/Users/Dell/Downloads/web lab/labsheet 10/public"
+        <Directory "C:/Users/Dell/Downloads/web lab/labsheet 10/public">
+            Require all granted
+            AllowOverride All
+            Options -Indexes
+        </Directory>
+    </VirtualHost>
+
+For HTTPS, configure the corresponding `*:443` virtual host as described in `18_ssl_setup.txt`. As administrator, add `127.0.0.1 myproject.local` to `C:\Windows\System32\drivers\etc\hosts`, validate Apache configuration with `httpd -t`, and restart Apache. These system-level changes are deliberately left for the machine owner to apply.

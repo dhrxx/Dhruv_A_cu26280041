@@ -1,0 +1,1 @@
+<p><?= escape($message) ?></p>

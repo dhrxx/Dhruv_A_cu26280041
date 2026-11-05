@@ -1,0 +1,24 @@
+LAB SHEET 9 - PHP + MYSQL WEB APP
+
+Requirements: PHP 8.1+ with PDO MySQL and Fileinfo extensions; MySQL 8+.
+
+1. In MySQL, run 01_schema.sql.
+2. Set database connection variables in the same PowerShell window:
+   $env:WEBAPP_DSN = 'mysql:host=127.0.0.1;dbname=webapp_db;charset=utf8mb4'
+   $env:WEBAPP_DB_USER = 'your_application_user'
+   $env:WEBAPP_DB_PASSWORD = 'your_password'
+   Do not use the MySQL administrator account for the application.
+3. Promote your registered account to admin in MySQL:
+   UPDATE webapp_db.users SET role = 'admin' WHERE email = 'you@example.com';
+4. Open this directory in PowerShell and run:
+   php -S 127.0.0.1:8000
+5. Visit http://127.0.0.1:8000/03_register.php to create an account.
+6. Sign in, then manage items at 07_add_product.php and 08_products.php.
+7. Test checkout with a cart and visit 19_checkout.php. The standalone
+   test_self.php --self-test checks cart, filter, pagination, sorting, XSS,
+   and transactional checkout logic without changing live database data.
+
+The local PHP server is for coursework, not public production hosting. Configure
+HTTPS, a least-privilege DB account, backups, CSRF protections, and secure
+server-level upload permissions before deployment. Remember-me and session
+cookies are marked Secure automatically when HTTPS is enabled.

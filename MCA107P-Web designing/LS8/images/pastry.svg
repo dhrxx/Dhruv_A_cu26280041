@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540" role="img" aria-labelledby="title">
+  <title id="title">Flaky golden morning pastry with berries</title>
+  <rect width="680" height="540" rx="22" fill="#f2e4ce"/>
+  <ellipse cx="345" cy="410" rx="225" ry="49" fill="#d5c6a9"/>
+  <path d="M160 372c-23-119 48-226 158-230 103-3 186 91 199 214-94 75-269 85-357 16Z" fill="#b96d39"/>
+  <path d="M176 359c-12-102 47-180 143-190 83-8 152 58 175 163-84 61-235 75-318 27Z" fill="#e5aa5e"/>
+  <path d="M205 348c25-41 42-96 40-140m4 154c42-41 70-102 78-171m-31 184c45-30 83-88 102-151m-42 160c46-21 82-66 105-119" fill="none" stroke="#f8d38b" stroke-linecap="round" stroke-width="12"/>
+  <path d="M201 348c25-41 42-96 40-140m4 154c42-41 70-102 78-171m-31 184c45-30 83-88 102-151m-42 160c46-21 82-66 105-119" fill="none" stroke="#fff0c9" stroke-linecap="round" stroke-width="3"/>
+  <circle cx="399" cy="206" r="15" fill="#a33b46"/><circle cx="422" cy="196" r="11" fill="#bd5153"/><path d="M406 190c8-19 20-23 32-23" fill="none" stroke="#476148" stroke-width="5"/>
+  <path d="M146 461c130 29 282 29 404 0" fill="none" stroke="#c1b292" stroke-linecap="round" stroke-width="6"/>
+</svg>

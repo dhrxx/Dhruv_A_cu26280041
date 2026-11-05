@@ -1,0 +1,3 @@
+Question 17: Configure an .htaccess file to implement clean URLs, force HTTPS redirection, and disable directory listing.
+
+The active Apache configuration is in `public/.htaccess`. It redirects HTTP to HTTPS, disables directory indexes, prevents access to hidden files, and routes non-file paths to the public front controller. Enable Apache's `mod_rewrite` and `AllowOverride All` for this site before using it.

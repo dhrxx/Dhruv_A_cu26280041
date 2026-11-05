@@ -1,0 +1,24 @@
+LAB SHEET 7 - ONLINE BOOKSTORE SETUP
+
+1. Install PHP 8.1+ with the PDO MySQL extension, and install MySQL 8+.
+   Enable pdo_mysql in php.ini if your PHP package does not enable it by default.
+2. From MySQL, run this file: 02_schema.sql
+3. Configure the database environment variables in PowerShell:
+   $env:BOOKSTORE_DSN = 'mysql:host=127.0.0.1;dbname=online_bookstore;charset=utf8mb4'
+   $env:BOOKSTORE_DB_USER = 'your_mysql_user'
+   $env:BOOKSTORE_DB_PASSWORD = 'your_mysql_password'
+   Use a dedicated local application account instead of an administrator account.
+4. Open this folder in PowerShell and start PHP's local development server:
+   php -S 127.0.0.1:8000
+5. Visit http://127.0.0.1:8000/01_home.php and register an account.
+6. Promote your own account to administrator in MySQL:
+   UPDATE online_bookstore.users SET role = 'admin' WHERE email = 'your-email@example.com';
+7. Sign in, open 08_admin.php, and add catalogue books.
+8. Use 20_e2e_test.php to follow the browse/search/cart/login/checkout journey.
+   Run `php 20_e2e_test.php --self-test` for a database-free checkout/stock test.
+   Run `php 20_e2e_test.php` with the configured database to test order, review,
+   wishlist, status, and revenue queries inside a transaction that is rolled back.
+
+The built-in PHP server is for local learning only. Deploy behind a configured
+web server with HTTPS, a restricted database account, and secrets outside the
+web root. Apache is not configured by these examples.

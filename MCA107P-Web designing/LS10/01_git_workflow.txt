@@ -1,0 +1,11 @@
+Question 1: Initialize a Git repository for the project, add a proper .gitignore, and commit the code in logical steps using Git commands.
+
+The parent "web lab" directory is already inside a Git repository. Do not initialize a nested repository here. From the project root, inspect and commit only this lab:
+
+    git status --short
+    git add "labsheet 10/.gitignore"
+    git commit -m "Add Lab Sheet 10 ignore rules"
+    git add "labsheet 10"
+    git commit -m "Add Lab Sheet 10 MVC and security exercises"
+
+The .gitignore beside this file excludes Composer dependencies, secrets, generated uploads, and logs. Review `git diff --cached` before each commit. These commands are examples; they have not been run, so they will not commit unrelated work in the existing repository.

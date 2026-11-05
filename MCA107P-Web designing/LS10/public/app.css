@@ -1,0 +1,11 @@
+body { margin: 0; color: #18212b; background: #f4f7fb; font: 16px/1.5 system-ui, sans-serif; }
+header, footer { padding: 1rem; background: #162d4d; color: #fff; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+nav a { color: #fff; }
+.container { max-width: 56rem; margin: 1.5rem auto; padding: 0 1rem; }
+.form-card, .products li { display: grid; gap: .8rem; margin: 1rem 0; padding: 1rem; background: #fff; border: 1px solid #d5deea; border-radius: .5rem; }
+label { display: grid; gap: .3rem; }
+input, button { padding: .55rem; font: inherit; }
+button { cursor: pointer; }
+.inline-form { display: inline; }
+.error { color: #9c1c24; }

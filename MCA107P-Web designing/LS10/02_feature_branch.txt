@@ -1,0 +1,24 @@
+Question 2: Create a feature branch, make changes, and merge it into the main branch, resolving a deliberate merge conflict; push the repository to GitHub.
+
+Run this exercise from the existing repository root only after committing or stashing other work. Set `main` to the actual base branch if this repository uses a different name.
+
+    git switch main
+    git pull --ff-only
+    git switch -c lab10-feature
+    # Make and commit a change on the feature branch.
+    git add "labsheet 10"
+    git commit -m "Implement Lab Sheet 10 feature"
+    git switch main
+    # For a deliberate practice conflict, make a different edit to the same
+    # line on main and commit it before merging.
+    git add "labsheet 10"
+    git commit -m "Add competing practice change"
+    git merge lab10-feature
+
+When Git reports a conflict, open each listed file, choose the intended combined content, remove all conflict markers, then run:
+
+    git add <resolved-file>
+    git commit
+    git push -u origin main
+
+Do not create a real conflict or push from this solution automatically. A GitHub remote and permission to publish the repository are required.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540" role="img" aria-labelledby="title">
+  <title id="title">A round golden sourdough loaf</title>
+  <rect width="680" height="540" rx="22" fill="#dce8da"/>
+  <path d="M93 405c104-72 361-88 496 4l-16 72H110Z" fill="#f3e8ce"/>
+  <ellipse cx="343" cy="359" rx="203" ry="129" fill="#c47b3d"/>
+  <path d="M145 348c12-90 90-166 190-169 109-3 185 70 194 171-82 59-283 74-384-2Z" fill="#dda35e"/>
+  <path d="M217 326c28-48 59-81 101-102m-73 118c43-61 83-98 144-128" fill="none" stroke="#f8d694" stroke-linecap="round" stroke-width="22"/>
+  <path d="M220 326c28-48 59-81 101-102m-73 118c43-61 83-98 144-128" fill="none" stroke="#fff0cb" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="219" cy="373" r="5" fill="#81502e"/><circle cx="273" cy="401" r="4" fill="#81502e"/><circle cx="451" cy="366" r="5" fill="#81502e"/><circle cx="394" cy="406" r="4" fill="#81502e"/>
+  <path d="M99 462c152 31 335 25 480-5" fill="none" stroke="#c7b995" stroke-linecap="round" stroke-width="6"/>
+</svg>
