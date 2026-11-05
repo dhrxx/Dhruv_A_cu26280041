@@ -1,0 +1,30 @@
+Apache virtual host setup on Kali Linux
+
+1. Create the project directory:
+   sudo mkdir -p /var/www/collegeweb
+   sudo chown -R "$USER":www-data /var/www/collegeweb
+
+2. Create /var/www/collegeweb/index.php containing:
+   <?php echo "collegeweb.local is working"; ?>
+
+3. Create /etc/apache2/sites-available/collegeweb.local.conf:
+   <VirtualHost *:80>
+       ServerName collegeweb.local
+       DocumentRoot /var/www/collegeweb
+       <Directory /var/www/collegeweb>
+           AllowOverride All
+           Require all granted
+       </Directory>
+       ErrorLog ${APACHE_LOG_DIR}/collegeweb_error.log
+       CustomLog ${APACHE_LOG_DIR}/collegeweb_access.log combined
+   </VirtualHost>
+
+4. Enable and test:
+   sudo a2ensite collegeweb.local.conf
+   sudo apache2ctl configtest
+   sudo systemctl reload apache2
+
+5. Add to /etc/hosts:
+   127.0.0.1 collegeweb.local
+
+6. Open http://collegeweb.local
